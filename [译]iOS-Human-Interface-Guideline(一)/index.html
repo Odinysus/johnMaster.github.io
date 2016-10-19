@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>\[译\]iOS Human Interface Guideline\(一\).md | John</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="翻译官方文档: iOS Human Interface Guidelines-Preview
+
+概述设计原则作为一个APP设计师,你有机会推出一个很酷的作品,并晋升到APP Store Top排行榜.为了达到这个目的,你需要满足用户对APP的质量和功能的高期望.有三个主要主题使iOS区别于其他平台:  
+
+清晰.贯穿着整个系统,任何字号的文本都是清晰的,图标是清晰易懂的,装饰是恰当好处的,和突出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="\[译\]iOS Human Interface Guideline\(一\).md">
+<meta property="og:url" content="http://johnmaster.com/[译]iOS-Human-Interface-Guideline(一)/index.html">
+<meta property="og:site_name" content="John">
+<meta property="og:description" content="翻译官方文档: iOS Human Interface Guidelines-Preview
+
+概述设计原则作为一个APP设计师,你有机会推出一个很酷的作品,并晋升到APP Store Top排行榜.为了达到这个目的,你需要满足用户对APP的质量和功能的高期望.有三个主要主题使iOS区别于其他平台:  
+
+清晰.贯穿着整个系统,任何字号的文本都是清晰的,图标是清晰易懂的,装饰是恰当好处的,和突出">
+<meta property="og:image" content="https://developer.apple.com/ios/human-interface-guidelines/images/whatsnew_messaging.png">
+<meta property="og:image" content="https://developer.apple.com/ios/human-interface-guidelines/images/whatsnew_siri.png">
+<meta property="og:updated_time" content="2016-10-19T19:19:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="\[译\]iOS Human Interface Guideline\(一\).md">
+<meta name="twitter:description" content="翻译官方文档: iOS Human Interface Guidelines-Preview
+
+概述设计原则作为一个APP设计师,你有机会推出一个很酷的作品,并晋升到APP Store Top排行榜.为了达到这个目的,你需要满足用户对APP的质量和功能的高期望.有三个主要主题使iOS区别于其他平台:  
+
+清晰.贯穿着整个系统,任何字号的文本都是清晰的,图标是清晰易懂的,装饰是恰当好处的,和突出">
+<meta name="twitter:image" content="https://developer.apple.com/ios/human-interface-guidelines/images/whatsnew_messaging.png">
+  
+    <link rel="alternative" href="/atom.xml" title="John" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <script src="/style.js"></script>
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">a flying white kite</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="null" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">a flying white kite</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-[译]iOS-Human-Interface-Guideline(一)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      \[译\]iOS Human Interface Guideline\(一\).md
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>翻译官方文档: <a href="https://developer.apple.com/ios/human-interface-guidelines/" target="_blank" rel="external">iOS Human Interface Guidelines-Preview</a></p>
+</blockquote>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h3><p>作为一个APP设计师,你有机会推出一个很酷的作品,并晋升到APP Store Top排行榜.为了达到这个目的,你需要满足用户对APP的质量和功能的高期望.<br>有三个主要主题使iOS区别于其他平台:  </p>
+<ul>
+<li><strong>清晰</strong>.贯穿着整个系统,任何字号的文本都是清晰的,图标是清晰易懂的,装饰是恰当好处的,和突出重点功能驱动着设计, 负空间,颜色,字体,图形和界面元素巧妙地突出重要内容和传达交互性.  </li>
+<li><strong>遵从</strong>.流体运动和简洁,精美的界面帮助用户理解内容并与之进行交互,而不是跟用户作对.应用内容通常充满整个屏幕,毛玻璃效果经常暗示更多.最低限度地使用边框(bezel),渐变和阴影能保持界面明亮且清新,与此同时确保应用内容是最核心的.  </li>
+<li><strong>深度</strong>.独特的视觉层次和真实的动作传达层次感,赋予活力和促进理解.触摸和可发现性能提高乐趣,能够访问功能和额外内容,且没有丢失上下文.当用户通过内容导航(navigate)时,过场(Transitions)提供了深度感.(译注:导航栏<code>UINavigationController</code>在<code>push</code>一个<code>UIViewController</code>时,过场动画<code>Transitions animation</code>能给用户一种深度感)</li>
+</ul>
+<p>为了最大化影响力和范围.从考虑你的APP ID开始,就请牢记下列的准则:  </p>
+<ul>
+<li><p><strong>美学完整性</strong><br>美学完整性代表APP外貌和行为与功能完美地融为一体.例如,一个APP在为帮助用户执行严肃的任务时,通过使用微妙的,不起眼的图形,标准控制和可预测行,能让他们保持专注.另一方面,一个沉浸式APP,例如游戏,可以传递一个迷人的外表,保证内容有趣且令人兴奋的,同时刺激用户的探索欲望.  </p>
+</li>
+<li><p><strong>一致性</strong><br>一个始终如一的APP通过系统提供的界面元素,知名的图标,标准的文本格式和同一的术语实现熟悉的标准和模式.APP以用户期望的方式结合了特性与行为.  </p>
+</li>
+<li><p><strong><a href="http://blog.csdn.net/richardbao2000/article/details/1442031" target="_blank" rel="external">直接操纵</a></strong><br>单屏幕内容的直接操纵吸引用户和促进理解.用户在转动屏幕或使用手势影响屏幕内容时体验直接操纵.通过直接操纵,他们可以看到动作能立即地,明显地展示结果.  </p>
+</li>
+<li><p><strong>反馈</strong><br>反馈接收动作和显示结果让用户保持消息灵通.内置的iOS APP提供明显的反馈来响应用户的动作.交互元素在轻击时短暂地高亮,进度指示器显示长时间运转操作的状态,动画和声音都能帮助用户识别当前动作的结果.  </p>
+</li>
+<li><p><strong><a href="http://xueshu.baidu.com/s?wd=paperuri%3A%280b2f8030b39e769dc4e0e39eda2795f3%29&amp;filter=sc_long_sign&amp;tn=SE_xueshusource_2kduw22v&amp;sc_vurl=http%3A%2F%2Fwww.doc88.com%2Fp-9972675554480.html&amp;ie=utf-8&amp;sc_us=11208142479284131959" target="_blank" rel="external">隐喻</a></strong><br>用户能在一个APP的可视对象和动作隐喻了熟悉的经验–不论是否来自现实或虚拟世界的环境中快速上手.隐喻在iOS上很有用是因为用户在手机屏幕上进行物理交互.用户挪开视图,暴露内容下方的内容.他们拖动和滑动内容.他们打开开关,移动滑动条,滚动选择器的数值.他们甚至翻书页和翻杂志.</p>
+</li>
+<li><p><strong>用户控制</strong><br>贯穿整个iOS系统,是用户-而不是APP-在控制.APP可以猜测一个行动或警告一些危险的结果,但是app经常错误地接管用户的决策.最优秀的APP能在让用户做决策与避免不必要的结果之间找到一个合理的平衡.通过保持交互元素可熟悉的和可预见的,批准破坏性行为,轻松地取消操作,甚至是进行中的操作等,一个APP可以让用户感觉他们在控制他们的APP.</p>
+</li>
+</ul>
+<p>###iOS 10的新内容<br>在iOS 10,你可以建立比以前更厉害的APP.<br><img src="https://developer.apple.com/ios/human-interface-guidelines/images/whatsnew_messaging.png" alt="power image"></p>
+<ul>
+<li><p><strong>搜索屏幕和Home屏幕上的小部件(widget)</strong> 小部件提供节省时间的,有用的信息或不用打开APP就能使用特定功能.在过去,用户添加小部件到通知中心(Notification Center)来快速访问.现在,用户添加小部件到搜索屏幕,而用户只需在Home屏幕和锁屏时向右滑动就能看到搜索屏幕.当用户使用3D Touch按压Home屏幕上的APP图标时,还可以在弹出的动作列表中加入小部件.小部件的设计与行为已发生改变.确保回顾和相对应地更新已存在的设计.查看<a href="https://developer.apple.com/ios/human-interface-guidelines/extensions/widgets/" target="_blank" rel="external">小部件</a></p>
+</li>
+<li><p><strong>集成Message</strong> 通过实现出现在一个Messages聊天界面下方和能让用户分享APP特有的内容给好友的信息扩展(Message extension),APP可以与Message集成.APP可以分享文字,照片,视频,贴纸,甚至Message游戏之类的交互内容.查看<a href="https://developer.apple.com/ios/human-interface-guidelines/extensions/messaging/" target="_blank" rel="external">消息传送</a>  </p>
+</li>
+</ul>
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/whatsnew_siri.png" alt="siri">  </p>
+<ul>
+<li><p><strong>集成Siri</strong> APP可以集成Siri,让用户使用语音来执行APP的特定动作,例如打电话,发送信息,开始锻炼等.查看<a href="https://developer.apple.com/ios/human-interface-guidelines/features/siri/" target="_blank" rel="external">Siri</a>  </p>
+</li>
+<li><p><strong>扩展通知中心</strong> 当用户使用3D Touch按压通知中心或在一个无锁状态的设备上下拉通知中心时,使用一个扩展的详细视图来增强通知中心.使用这个扩展视图让用户快速获得更多通知中心的信息并且在没有丢失上下文的情景下,立即执行动作.查看<a href="https://developer.apple.com/ios/human-interface-guidelines/features/notifications/" target="_blank" rel="external">通知中心</a>  </p>
+</li>
+</ul>
+<h3 id="界面要点"><a href="#界面要点" class="headerlink" title="界面要点"></a>界面要点</h3><p>大多数iOS APP使用UIKit中的组件构建.UIKit,是一个定义了共同接口元素的编程框架.这个框架让app实现在不同系统上的统一的外观,同时提供高度自定义方案.UIKit元素灵活且熟悉.他们适应力强,足够使你设计一个在任何iOS设备上都看起来不错的APP,而且在系统引入新界面时,能自动更新.UIKit的界面元素适合下面这三种分类:  </p>
+<ul>
+<li><p><strong>Bars</strong> 告诉用户在APP中的位置,提供导航栏和可能包含按钮和其他初始化动作,交流信息的元素.  </p>
+</li>
+<li><p><strong>Views</strong> 包含用户需要看到的主要内容,例如文本,图形,动画,和交互元素.视图可以允许下列行为:滚动,插入动作,删除动作,排列动作.</p>
+</li>
+<li><p><strong>Control</strong> 初始化动作和传递信息.按钮,开关,输入框,进度指示器都是控制的例子.</p>
+</li>
+</ul>
+<p>除了定义iOS的界面,UIKit还定义APP可以适应的功能.通过这个框架,APP可以在触摸屏上响应手势,使绘画,可得性,打印这些特性生效.  </p>
+<p>iOS跟其他编程框架和技术紧密结合,如Apple Pay,HealthKit,和ResearchKit,让你设计强大的APP.</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/[译]iOS-Human-Interface-Guideline(一)/" class="archive-article-date">
+  	<time datetime="2016-10-19T19:19:12.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-20</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/[译]iOS-Human-Interface-Guideline(二)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          \[译\]iOS Human Interface Guideline\(二\).md
+        
+      </div>
+    </a>
+  
+  
+    <a href="/[译]core Foundation design concepts/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">\[译\]core Foundation design concepts</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

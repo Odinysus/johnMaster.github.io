@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>vim插件安装以及使用.md | John</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="vim是个很强大的文本编辑器,不仅是因为它能让我们完全抛弃使用键盘,而且拥有强大的扩展性,可以添加任何各种各样的插件.只要你所想到的,基本能在网上找到想对应的插件.
+VundleVundle是vim上的插件管理器.只需要在.vimrc添加上控件名,Vundle可以帮我们下载到插件文件夹/Users/{username}/.vim/bundle中.有一个vim插件的资源网站,可以在那里搜索:vim">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim插件安装以及使用.md">
+<meta property="og:url" content="http://johnmaster.com/vim插件安装以及使用/index.html">
+<meta property="og:site_name" content="John">
+<meta property="og:description" content="vim是个很强大的文本编辑器,不仅是因为它能让我们完全抛弃使用键盘,而且拥有强大的扩展性,可以添加任何各种各样的插件.只要你所想到的,基本能在网上找到想对应的插件.
+VundleVundle是vim上的插件管理器.只需要在.vimrc添加上控件名,Vundle可以帮我们下载到插件文件夹/Users/{username}/.vim/bundle中.有一个vim插件的资源网站,可以在那里搜索:vim">
+<meta property="og:image" content="https://cl.ly/2g0R1k3G3x0H/download/Screen%20Shot%202016-09-04%20at%206.11.14%20PM.png">
+<meta property="og:image" content="https://cl.ly/3O0y2W2t0003/download/Image%202016-09-04%20at%206.28.18%20PM.png">
+<meta property="og:image" content="https://github.com/scrooloose/syntastic/raw/master/_assets/screenshot_1.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/63f9947cac196ec7e6e3d790fd3cd1e1463a7b9b/687474703a2f2f692e696d6775722e636f6d2f4d737549422e706e67">
+<meta property="og:image" content="https://cl.ly/3y2U1A0t2V3P/download/Image%202016-09-06%20at%201.45.31%20PM.png">
+<meta property="og:image" content="https://cl.ly/1b0Y0B1J2e1M/download/Image%202016-09-30%20at%203.48.59%20AM.png">
+<meta property="og:image" content="https://cl.ly/3D0v3k43423n/download/Image%202016-09-30%20at%203.09.16%20AM.png">
+<meta property="og:updated_time" content="2016-10-19T18:13:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vim插件安装以及使用.md">
+<meta name="twitter:description" content="vim是个很强大的文本编辑器,不仅是因为它能让我们完全抛弃使用键盘,而且拥有强大的扩展性,可以添加任何各种各样的插件.只要你所想到的,基本能在网上找到想对应的插件.
+VundleVundle是vim上的插件管理器.只需要在.vimrc添加上控件名,Vundle可以帮我们下载到插件文件夹/Users/{username}/.vim/bundle中.有一个vim插件的资源网站,可以在那里搜索:vim">
+<meta name="twitter:image" content="https://cl.ly/2g0R1k3G3x0H/download/Screen%20Shot%202016-09-04%20at%206.11.14%20PM.png">
+  
+    <link rel="alternative" href="/atom.xml" title="John" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <script src="/style.js"></script>
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">a flying white kite</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="null" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">a flying white kite</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-vim插件安装以及使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vim插件安装以及使用.md
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>vim是个很强大的文本编辑器,不仅是因为它能让我们完全抛弃使用键盘,而且拥有强大的扩展性,可以添加任何各种各样的插件.只要你所想到的,基本能在网上找到想对应的插件.</p>
+<h4 id="Vundle"><a href="#Vundle" class="headerlink" title="Vundle"></a>Vundle</h4><p>Vundle是vim上的插件管理器.只需要在<code>.vimrc</code>添加上控件名,Vundle可以帮我们下载到插件文件夹<code>/Users/{username}/.vim/bundle</code>中.<br>有一个vim插件的资源网站,可以在那里搜索:<a href="http://vim-scripts.org/vim/scripts.html" target="_blank" rel="external">vim scripts</a></p>
+<ol>
+<li>clone Vundle ,在输入一下命令<br> cd ~/.vim/bundle<br> git clone <a href="https://github.com/VundleVim/Vundle.vim.git" target="_blank" rel="external">https://github.com/VundleVim/Vundle.vim.git</a>  </li>
+<li>输入<br> git clone <a href="https://github.com/VundleVim/Vundle.vim.git" target="_blank" rel="external">https://github.com/VundleVim/Vundle.vim.git</a> ~/.vim/bundle/Vundle.vim  </li>
+<li><p>修改配置文件<code>.vimrc</code>  </p>
+<pre><code>set nocompatible              
+filetype off                 
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+&quot; 从这里开始,end之前.添加你想要的插件,可以从本地,github,git,Vim Scripts中加载插件&quot;
+Plugin &apos;VundleVim/Vundle.vim&apos;
+Plugin &apos;tpope/vim-fugitive&apos;
+Plugin &apos;rstacruz/sparkup&apos;, {&apos;rtp&apos;: &apos;vim/&apos;}
+
+call vundle#end()            &quot; required
+filetype plugin indent on    &quot; required
+&quot; 然后这里开始添加vim的其他配置
+</code></pre></li>
+</ol>
+<p>添加插件之后(w保存),你可以使用<code>PluginList</code>查看当前配置中的插件列表<br><img src="https://cl.ly/2g0R1k3G3x0H/download/Screen%20Shot%202016-09-04%20at%206.11.14%20PM.png" alt="插件列表"><br>每当添加新的控件之后都要执行<code>PluginInstall</code>安装插件</p>
+<p>其他常用命令  </p>
+<pre><code>:BundleList              -列举列表(也就是.vimrc)中配置的所有插件
+:BundleInstall          -安装列表中的全部插件
+:BundleInstall!         -更新列表中的全部插件
+:BundleSearch foo   -查找foo插件
+:BundleSearch! foo  -刷新foo插件缓存
+:BundleClean           -清除列表中没有的插件
+:BundleClean!          -清除列表中没有的插件
+</code></pre><h4 id="EasyMotion"><a href="#EasyMotion" class="headerlink" title="EasyMotion"></a>EasyMotion</h4><p>高级的vim移动方式.<br>可以帮助你跳转到特定的单词中,而不必一个一个数要向前或向后跳多少个单词.<br>主要有两个用途:</p>
+<ol>
+<li>跳转某个特定单词.   </li>
+<li>跳转某一特定的行.  </li>
+</ol>
+<p>安装:</p>
+<pre><code>Plugin &apos;EasyMotion&apos;  
+</code></pre><p>设置  </p>
+<pre><code>let g:EasyMotion_leader_key = &apos;{keyword}&apos;
+</code></pre><p>我将快捷键绑定为大写<code>W</code>,假如我跳转到后面的单词,敲键盘<code>W</code>和w,会显示多个选项.<br><img src="https://cl.ly/3O0y2W2t0003/download/Image%202016-09-04%20at%206.28.18%20PM.png" alt="key"><br>让后根据提示输入对应字母就能跳转到其单词.<br>如果碰到当前超过48个单词,则会有一些相同的字母,输入之后.会跳转到第一个并从新生成字母索引.</p>
+<h3 id="neocomplcache"><a href="#neocomplcache" class="headerlink" title="neocomplcache"></a>neocomplcache</h3><p>自动补全插件,与此类似还有另外一个插件autocomplete.autocomplete对ruby的支持很差,经常卡死.<br>这个版本是带缓存版本.<br>安装:  </p>
+<pre><code>Plugin `neocomplcache`
+</code></pre><p>设置:  </p>
+<pre><code>let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_min_keyword_length = 3 &quot; 从第三个字符开始语法提示
+let g:neocomplcache_enable_smart_case = 1&quot; 区分大小写
+</code></pre><p>为了保险起见,在配置完成之后需要在vim中输入一下命令<code>NeoComplCacheEnable</code></p>
+<p>特别地,针对ruby,还需要一下配置  </p>
+<pre><code>autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+if !exists(&apos;g:neocomplcache_force_omni_patterns&apos;)
+  let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_omni_patterns.ruby = &apos;[^. *\t]\.\w*\|\h\w*::&apos;
+</code></pre><h3 id="Syntastic"><a href="#Syntastic" class="headerlink" title="Syntastic"></a>Syntastic</h3><p>语法审核和语法错误提示.这个可以实时检测语法并可以高亮其错误.插件本身不自带语法检查器,其中一部分利用系统的检查器,其他的需要自己下载.<br><img src="https://github.com/scrooloose/syntastic/raw/master/_assets/screenshot_1.png" alt="Syntastic"></p>
+<p>安装  </p>
+<pre><code>Plugin &apos;Syntastic&apos;
+</code></pre><p>配置</p>
+<pre><code>set statusline+=%#warningmsg#       &quot; 状态栏警告信息
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+&quot; 语法分析
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1   &quot; 自动显示错误信息,无错误时隐藏
+let g:syntastic_check_on_open = 1   &quot; 打开时检测
+let g:syntastic_check_on_wq = 1     &quot; 保存时检查
+let g:syntastic_ruby_exec = &apos;ruby&apos;  // 设置ruby检查器
+let g:syntastic_rb_checker = &apos;mri&apos;   &quot; 设置rb格式检查器为mri
+</code></pre><h3 id="vim-powerline"><a href="#vim-powerline" class="headerlink" title="vim - powerline"></a>vim - powerline</h3><p>使用与vim的一个更加酷炫的状态栏<br><img src="https://camo.githubusercontent.com/63f9947cac196ec7e6e3d790fd3cd1e1463a7b9b/687474703a2f2f692e696d6775722e636f6d2f4d737549422e706e67" alt="powerline"></p>
+<p>安装<br>这个插件并没有托管在<a href="http://vim-scripts.org/vim/scripts.html" target="_blank" rel="external">vim scripts</a>上,所以直接从github下载</p>
+<pre><code>Plugin &apos;https://github.com/Lokaltog/vim-powerline.git&apos;
+</code></pre><p>配置</p>
+<pre><code>set nocompatible   &quot; 不向下兼容
+set laststatus=2   &quot; Always show the statusline
+set encoding=utf-8 &quot; Necessary to show Unicode glyphs
+let g:Powerline_symbols = &apos;unicode&apos;
+let g:Powerline_colorscheme = &apos;solarized256&apos;
+let g:Powerline_stl_path_style = &apos;short&apos;
+set t_Co=256
+</code></pre><h3 id="nerdtree"><a href="#nerdtree" class="headerlink" title="nerdtree"></a>nerdtree</h3><p>nrdtree可以在当前vim中分割一个小窗口查看文件目录,如果我们在ruby或python的项目中使用vim,可能需要频繁得打开很多文件.需要查看文件目录查找文件.<br><img src="https://cl.ly/3y2U1A0t2V3P/download/Image%202016-09-06%20at%201.45.31%20PM.png" alt="nerdtree"><br>打开时默认打开当前文件所在的目录.</p>
+<p>安装  </p>
+<pre><code>Plugin &apos;The-NERD-tree&apos;
+</code></pre><p>配置</p>
+<pre><code>&quot; 如果当前没文件时,自动打开
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 &amp;&amp; !exists(&quot;s:std_in&quot;) | NERDTree | endif
+
+map &lt;C-n&gt; :NERDTreeToggle&lt;CR&gt;  &quot; 映射`ctrl+c`快捷键
+let g:nerdtree_tabs_smart_startup_focus = 1     
+let NERDTreeAutoCenter=1       &quot; nerdtree 光标所在的位置默认在窗口中间
+let NERDTreeWinPos = &apos;right&apos;   &quot; nerdtree 窗口显示在右边
+</code></pre><h3 id="cocoa-vim"><a href="#cocoa-vim" class="headerlink" title="cocoa.vim"></a>cocoa.vim</h3><p>vim下的cocoa扩展.官方文档<a href="http://www.vim.org/scripts/script.php?script_id=2674" target="_blank" rel="external">cocoa.vim</a><br>主要特性:  </p>
+<ul>
+<li>增强代码高亮   </li>
+<li>xcode式快捷键–⌘R 编译和运行, ⌘0切换项目窗口(只在GUI界面生效)  </li>
+<li>在<code>.m</code>文件中输入<code>:ListMethods</code>命令可以显示文件夹的方法列表</li>
+<li>在<code>.m</code>文件中输入<code>:BuildMethods</code>命令可以在<code>.h</code>文件中生成对应的声明方法  </li>
+<li>输入<code>:CocoaDoc</code>命令查看文档  </li>
+</ul>
+<p>使用vim自带的高亮:<br><img src="https://cl.ly/1b0Y0B1J2e1M/download/Image%202016-09-30%20at%203.48.59%20AM.png" alt="cocoa.vim-before"></p>
+<p>使用cocoa.vim中的高亮,增强不多,但聊胜于无:<br><img src="https://cl.ly/3D0v3k43423n/download/Image%202016-09-30%20at%203.09.16%20AM.png" alt="cocoa.vim-after"></p>
+<p>安装:  </p>
+<pre><code>Plugin &apos;cocoa.vim&apos;
+</code></pre><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>文件地址下载: <a href="https://cl.ly/1R0V3I0y0f0I" target="_blank" rel="external">.vimrc</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/vim插件安装以及使用/" class="archive-article-date">
+  	<time datetime="2016-10-19T18:13:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-20</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/设计模式:工厂模式--Objective-C实现(factory pattern)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          设计模式:工厂模式--Objective-C实现(factory pattern).md
+        
+      </div>
+    </a>
+  
+  
+    <a href="/iOS-字典转字符串的格式问题(iOS-wrong-format-of-json-string)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS-字典转字符串的格式问题(iOS-wrong-format-of-json-string).md</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

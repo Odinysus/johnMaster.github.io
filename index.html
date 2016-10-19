@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>John</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="John">
+<meta property="og:url" content="http://johnmaster.com/index.html">
+<meta property="og:site_name" content="John">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="John">
+  
+    <link rel="alternative" href="/atom.xml" title="John" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <script src="/style.js"></script>
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">a flying white kite</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="null" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">a flying white kite</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        
+  
+    <article id="post-[译]iOS-Human-Interface-Guideline(二)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/[译]iOS-Human-Interface-Guideline(二)/">\[译\]iOS Human Interface Guideline\(二\).md</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>翻译官方文档: <a href="https://developer.apple.com/ios/human-interface-guidelines/interaction/3d-touch/" target="_blank" rel="external">iOS Human Interface Guidelines-3D Touch</a></p>
+</blockquote>
+<h2 id="3D-Touch"><a href="#3D-Touch" class="headerlink" title="3D Touch"></a>3D Touch</h2><p>3D Touch添加一个额外的维度来基于触摸的交互,在已支持的设备上,人们可以通过对触摸屏施加不同的压力来使用不同的功能.APP可以通过展示一个菜单,显示额外的内容,执行一个动画.用户不需要学习新的手势就能使用3D Touch进行交互.当他们轻轻按压屏幕和得到响应是,能快速发现额外的交互维度.  </p>
+<h3 id="Home屏幕交互"><a href="#Home屏幕交互" class="headerlink" title="Home屏幕交互"></a>Home屏幕交互</h3><p>在Home屏幕,按压支持3D Touch的APP,展示一个动作视图.这个视图让你快速地执行指定APP中的常用任务和看见一些有趣的信息.日历能提供一个简短的事件.它还显示你的时间表上的下一次事件.想查看设计指导,查看<a href="https://developer.apple.com/ios/human-interface-guidelines/extensions/home-screen-actions/" target="_blank" rel="external">Home屏幕动作</a>和<a href="https://developer.apple.com/ios/human-interface-guidelines/extensions/widgets/" target="_blank" rel="external">小部件</a></p>
+<h3 id="Peek和Pop-看一眼和弹出"><a href="#Peek和Pop-看一眼和弹出" class="headerlink" title="Peek和Pop(看一眼和弹出)"></a>Peek和Pop(看一眼和弹出)</h3><p>peek功能让用户使用3D Touch来预览一些内容,如页面,链接,文件,一个临时出现在当前上下文的视图.对于支持这个功能的内容,为了看一眼(peek),用手指对其施加一点压力.简单地从挪开你的手指退出peek状态.为了查看更详细的信息,需要按压比之前重一点,直到弹出并充满真个屏幕.在一些peek视图中,你可以向上划来显示相关的动作按钮.在Safari看一眼(peek)链接时,你可以向上划显示打开链接并在后台运行,添加链接到阅读列表,复制链接的按钮.  </p>
+<p><strong>使用peek提供鲜明的,内容丰富的预览</strong> 在理想的情况下,peek提供足够APP相关信息来增强当前任务,或帮助用户决定是否全面参与项目.(打磨)例如,在决定将一个链接分享给用朋友或在Safari打开之前，先在Mail信息中的预览。Peek功能常用于在预览TableViewCell跳转到view的信息。  </p>
+<p><strong>设计一个足够大的peek视图</strong>  设计一个足够大的peek视图,让手指不会遮挡到它的内容。让用户清楚他们按压更深一点并完全弹出的内容是什么。  </p>
+<p><strong>采用一致的Peek和Pop</strong> 如果你在一些地方支持Peek和Pop,而其他地方没有.用户将不清楚可以在些地方哪使用这些特性。甚至这会怀疑APP出错或他们的设备出错。  </p>
+<p><strong>让每个peek都可以弹出</strong> 尽管peek已经向用户提供足够的信息。但如果用户决定离开当前任务并专注于peek具体内容时，让这些内容弹射出来。  </p>
+<p><strong>避免在peek视图中展示按钮状的元素</strong> 如果挪开手指去点击类似按钮的元素，peek就消失。  </p>
+<p><strong>同一内容不要同时出现peek和编辑菜单</strong> 当这两种特性同时生效时，可能让用户觉得困惑，同时系统也难分辨是哪个特性。需要额外的指导，查看<a href="https://developer.apple.com/ios/human-interface-guidelines/ui-controls/edit-menus/" target="_blank" rel="external">编辑菜单</a>.  </p>
+<p><strong>在适当的时候提供动作按钮</strong> 不是所有的peek都需要按钮，但是一个提供常用任务快捷方式的好方法。如果你的APP已经提供自定义的长按动作，在peek时包含相同的动作是佷好的实践。  </p>
+<p><strong>避免提供打开peek详情内容的动作按钮</strong> 用户经常通过用力按压打开peek的详情内容.所以,不需要特别地提供一个明显的打开按钮.  </p>
+<p><strong>不要通过peek这个方法来这行这些动作</strong> 不是每个设备都支持peek和pop,有一些用户可能会关闭3D Touch.你的app应该在不支持的设备上提供其他方式来触发这些动作.例如,你的app可以在用户进行长按时出现的视图中,镜像peek中的快捷动作.  </p>
+<p>###Live Photos<br>APP可以通过支持Live Photos,把压力感应合并到照片视图体验.在你按压Live Photos时,Live Photos通过使用移动和声音来显示拍照前后片刻的内容,能表现得很生动.其设计指导,查看<a href="https://developer.apple.com/ios/human-interface-guidelines/technologies/live-photos/" target="_blank" rel="external">Live Photos</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/[译]iOS-Human-Interface-Guideline(二)/" class="archive-article-date">
+  	<time datetime="2016-10-19T19:19:36.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-20</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-[译]iOS-Human-Interface-Guideline(一)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/[译]iOS-Human-Interface-Guideline(一)/">\[译\]iOS Human Interface Guideline\(一\).md</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>翻译官方文档: <a href="https://developer.apple.com/ios/human-interface-guidelines/" target="_blank" rel="external">iOS Human Interface Guidelines-Preview</a></p>
+</blockquote>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h3><p>作为一个APP设计师,你有机会推出一个很酷的作品,并晋升到APP Store Top排行榜.为了达到这个目的,你需要满足用户对APP的质量和功能的高期望.<br>有三个主要主题使iOS区别于其他平台:  </p>
+<ul>
+<li><strong>清晰</strong>.贯穿着整个系统,任何字号的文本都是清晰的,图标是清晰易懂的,装饰是恰当好处的,和突出重点功能驱动着设计, 负空间,颜色,字体,图形和界面元素巧妙地突出重要内容和传达交互性.  </li>
+<li><strong>遵从</strong>.流体运动和简洁,精美的界面帮助用户理解内容并与之进行交互,而不是跟用户作对.应用内容通常充满整个屏幕,毛玻璃效果经常暗示更多.最低限度地使用边框(bezel),渐变和阴影能保持界面明亮且清新,与此同时确保应用内容是最核心的.  </li>
+<li><strong>深度</strong>.独特的视觉层次和真实的动作传达层次感,赋予活力和促进理解.触摸和可发现性能提高乐趣,能够访问功能和额外内容,且没有丢失上下文.当用户通过内容导航(navigate)时,过场(Transitions)提供了深度感.(译注:导航栏<code>UINavigationController</code>在<code>push</code>一个<code>UIViewController</code>时,过场动画<code>Transitions animation</code>能给用户一种深度感)</li>
+</ul>
+<p>为了最大化影响力和范围.从考虑你的APP ID开始,就请牢记下列的准则:  </p>
+<ul>
+<li><p><strong>美学完整性</strong><br>美学完整性代表APP外貌和行为与功能完美地融为一体.例如,一个APP在为帮助用户执行严肃的任务时,通过使用微妙的,不起眼的图形,标准控制和可预测行,能让他们保持专注.另一方面,一个沉浸式APP,例如游戏,可以传递一个迷人的外表,保证内容有趣且令人兴奋的,同时刺激用户的探索欲望.  </p>
+</li>
+<li><p><strong>一致性</strong><br>一个始终如一的APP通过系统提供的界面元素,知名的图标,标准的文本格式和同一的术语实现熟悉的标准和模式.APP以用户期望的方式结合了特性与行为.  </p>
+</li>
+<li><p><strong><a href="http://blog.csdn.net/richardbao2000/article/details/1442031" target="_blank" rel="external">直接操纵</a></strong><br>单屏幕内容的直接操纵吸引用户和促进理解.用户在转动屏幕或使用手势影响屏幕内容时体验直接操纵.通过直接操纵,他们可以看到动作能立即地,明显地展示结果.  </p>
+</li>
+<li><p><strong>反馈</strong><br>反馈接收动作和显示结果让用户保持消息灵通.内置的iOS APP提供明显的反馈来响应用户的动作.交互元素在轻击时短暂地高亮,进度指示器显示长时间运转操作的状态,动画和声音都能帮助用户识别当前动作的结果.  </p>
+</li>
+<li><p><strong><a href="http://xueshu.baidu.com/s?wd=paperuri%3A%280b2f8030b39e769dc4e0e39eda2795f3%29&amp;filter=sc_long_sign&amp;tn=SE_xueshusource_2kduw22v&amp;sc_vurl=http%3A%2F%2Fwww.doc88.com%2Fp-9972675554480.html&amp;ie=utf-8&amp;sc_us=11208142479284131959" target="_blank" rel="external">隐喻</a></strong><br>用户能在一个APP的可视对象和动作隐喻了熟悉的经验–不论是否来自现实或虚拟世界的环境中快速上手.隐喻在iOS上很有用是因为用户在手机屏幕上进行物理交互.用户挪开视图,暴露内容下方的内容.他们拖动和滑动内容.他们打开开关,移动滑动条,滚动选择器的数值.他们甚至翻书页和翻杂志.</p>
+</li>
+<li><p><strong>用户控制</strong><br>贯穿整个iOS系统,是用户-而不是APP-在控制.APP可以猜测一个行动或警告一些危险的结果,但是app经常错误地接管用户的决策.最优秀的APP能在让用户做决策与避免不必要的结果之间找到一个合理的平衡.通过保持交互元素可熟悉的和可预见的,批准破坏性行为,轻松地取消操作,甚至是进行中的操作等,一个APP可以让用户感觉他们在控制他们的APP.</p>
+</li>
+</ul>
+<p>###iOS 10的新内容<br>在iOS 10,你可以建立比以前更厉害的APP.<br><img src="https://developer.apple.com/ios/human-interface-guidelines/images/whatsnew_messaging.png" alt="power image"></p>
+<ul>
+<li><p><strong>搜索屏幕和Home屏幕上的小部件(widget)</strong> 小部件提供节省时间的,有用的信息或不用打开APP就能使用特定功能.在过去,用户添加小部件到通知中心(Notification Center)来快速访问.现在,用户添加小部件到搜索屏幕,而用户只需在Home屏幕和锁屏时向右滑动就能看到搜索屏幕.当用户使用3D Touch按压Home屏幕上的APP图标时,还可以在弹出的动作列表中加入小部件.小部件的设计与行为已发生改变.确保回顾和相对应地更新已存在的设计.查看<a href="https://developer.apple.com/ios/human-interface-guidelines/extensions/widgets/" target="_blank" rel="external">小部件</a></p>
+</li>
+<li><p><strong>集成Message</strong> 通过实现出现在一个Messages聊天界面下方和能让用户分享APP特有的内容给好友的信息扩展(Message extension),APP可以与Message集成.APP可以分享文字,照片,视频,贴纸,甚至Message游戏之类的交互内容.查看<a href="https://developer.apple.com/ios/human-interface-guidelines/extensions/messaging/" target="_blank" rel="external">消息传送</a>  </p>
+</li>
+</ul>
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/whatsnew_siri.png" alt="siri">  </p>
+<ul>
+<li><p><strong>集成Siri</strong> APP可以集成Siri,让用户使用语音来执行APP的特定动作,例如打电话,发送信息,开始锻炼等.查看<a href="https://developer.apple.com/ios/human-interface-guidelines/features/siri/" target="_blank" rel="external">Siri</a>  </p>
+</li>
+<li><p><strong>扩展通知中心</strong> 当用户使用3D Touch按压通知中心或在一个无锁状态的设备上下拉通知中心时,使用一个扩展的详细视图来增强通知中心.使用这个扩展视图让用户快速获得更多通知中心的信息并且在没有丢失上下文的情景下,立即执行动作.查看<a href="https://developer.apple.com/ios/human-interface-guidelines/features/notifications/" target="_blank" rel="external">通知中心</a>  </p>
+</li>
+</ul>
+<h3 id="界面要点"><a href="#界面要点" class="headerlink" title="界面要点"></a>界面要点</h3><p>大多数iOS APP使用UIKit中的组件构建.UIKit,是一个定义了共同接口元素的编程框架.这个框架让app实现在不同系统上的统一的外观,同时提供高度自定义方案.UIKit元素灵活且熟悉.他们适应力强,足够使你设计一个在任何iOS设备上都看起来不错的APP,而且在系统引入新界面时,能自动更新.UIKit的界面元素适合下面这三种分类:  </p>
+<ul>
+<li><p><strong>Bars</strong> 告诉用户在APP中的位置,提供导航栏和可能包含按钮和其他初始化动作,交流信息的元素.  </p>
+</li>
+<li><p><strong>Views</strong> 包含用户需要看到的主要内容,例如文本,图形,动画,和交互元素.视图可以允许下列行为:滚动,插入动作,删除动作,排列动作.</p>
+</li>
+<li><p><strong>Control</strong> 初始化动作和传递信息.按钮,开关,输入框,进度指示器都是控制的例子.</p>
+</li>
+</ul>
+<p>除了定义iOS的界面,UIKit还定义APP可以适应的功能.通过这个框架,APP可以在触摸屏上响应手势,使绘画,可得性,打印这些特性生效.  </p>
+<p>iOS跟其他编程框架和技术紧密结合,如Apple Pay,HealthKit,和ResearchKit,让你设计强大的APP.</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/[译]iOS-Human-Interface-Guideline(一)/" class="archive-article-date">
+  	<time datetime="2016-10-19T19:19:12.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-20</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-[译]core Foundation design concepts" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/[译]core Foundation design concepts/">\[译\]core Foundation design concepts</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文翻译: <a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFDesignConcepts/CFDesignConcepts.html#//apple_ref/doc/uid/10000122-SW1" target="_blank" rel="external">Core Foundation design concept</a></p>
+</blockquote>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Core Foundation 是一组慨念源自OC基础框架的编程接口,并使用c语言实现的库.为了实现这个库,Core Foundation用C语言实现一个限制对象模型.Core Foundation定义不透明类型来封装数据和函数,之后就称他们为”对象”.<br>Core Foundation对象设计的编程接口具有易用性和可复用性.在普通层次下,Core Foundation有以下特性:  </p>
+<ul>
+<li>能够在繁杂多样的框架和库中共享数据和代码  </li>
+<li>使得在一定程度上独立于操作系统成为可能</li>
+<li>支持使用unicode字符串的国际化</li>
+<li>提供一些API和其他有用的功能,包括一个插件架构,XML属性列表等</li>
+</ul>
+<p>Core Foundation使OS X上不同的框架和库共享代码与数据成为可能.应用,库,框架让你在平常C编程中，定义混合Core Foundation类型的接口；因此,它们可以计算数据–就像Core Foundation对象–通过这些接口设计算各自的数据.<br>Core Foundation在已确定的服务和Cocoa的Foundation框架之间提供”toll-free bridging”(无代价桥接). toll-free bridging能将函数参数中的Core Foundation对象替换成Cocoa对象或者反过来.<br>一些Core Foundation类型和函数是在不同操作系统上特定代码实现的抽象. 使用这些API能更容易适配不同平台.<br>date与number类型抽象了时间工具,并提供绝对时间和公历时间的之间的转换工具.它还抽象了数字值,并为这些内部表示不同的值提供的互转工具.<br>Core Foundation给应用开发带来其中一个主要的好处是支持国际化.通过框架中的字符串对象,Core Foundation使国际化在OS X与Cocoa上接口的编写与实现变得更简单,健壮和一致.这个特性的本质部分是一种类型–CFString, 代表一个16bit的Unicode字符数组. CFString对象能灵活地支持百万字节的字符, 且使用一些足够简单的低层的接口就能计算字符数据.它达到了跟与之关联的标准C字符串差不多的性能.<br>你应该阅读这个文档来了解Core Foundation之下的基本设计原则和Core Foundation对象跟Cocoa(Touch)对象之间的交互.</p>
+<h3 id="不透明类型"><a href="#不透明类型" class="headerlink" title="不透明类型"></a>不透明类型</h3><p>Core Foundation对象模型基于不透明类型,且支持封装和多态函数.<br>基于不透明类型的对象的各个字段隐藏于客户端,但是这些类型的函数能提供大多数字段值.Figure 1 描绘了不透明类型所隐藏的数据且仅展示其接口给客户端.   </p>
+<blockquote>
+<p>Note: “Class”不是用来指向不透明类型的,尽管类和不透明类型概念上相似,可很多人可能被这个词混淆.然而,Core Foundation文档所指的类型是特定的,这些类型的数据承载实例就称之为”对象”</p>
+</blockquote>
+<p>Core Foundation有很多不透明类型,而且它们的名字说明了它们的预期用途.例如,<code>CFString</code> 是一个用来”展示”和操作Unicode字符数组的不透明类型(CF是Code Foundation的前缀). <code>CFArray</code>是基于下标的泛型集合.一个不透明类型支持的函数,常量和其他次要的数据类型通常定义在其类型对应名字的头文件中.例如<code>CFArray.h</code>,<code>CFArray</code>包含定义符号.<br><img src="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFDesignConcepts/Art/opaquetypes_2x.png" alt="Figure 1  An opaque type"></p>
+<h4 id="不透明类型的优点"><a href="#不透明类型的优点" class="headerlink" title="不透明类型的优点"></a>不透明类型的优点</h4><p>部分情况下,一个不透明类型似乎要通过令人沮丧的结构内容直接存取来增加一些没有必要的限制. 此外，似乎不透明的类型可能会影响项目性能相关的开销.但是不透明类型的好处要大于这些表面的局限性.<br>不透明类型为底层功能的实现提供更好的灵活性和抽象性.通过隐藏结构字段的详细信息,Core Foundation减少发在客户端(Xcode)编码时,字段详情被更改后代码出错的几率.此外,如果暴露不透明类型并允许优化,可能会造成困惑(译注: 其他人可能看不懂其优化代码,还不如封装起来).例如<code>CFString</code> “正式”代表<code>UniChar</code>的16bit字符数组.然而, <code>CFString</code>可能选择储存一个ASCII范围内8bit数值的字符串.复制一个不可变的对象可能(经常发生)导致共同引用一个对象而不是内存中两个独立的对象.(查看<a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/CFMemoryMgmt.html#//apple_ref/doc/uid/10000127i" target="_blank" rel="external">Core Foundation内存管理编程指南</a>).<br>继续<code>CFString</code>这个例子,使用一个不透明类型来储存字符似乎太笨重.事实证明,并不是这样的,CPU消耗的资源比使用简单的C字符数组高不了多少,况且经常比他们低.另外,不透明并不一定说明这一个不透明类型从不提供直接访问内容的机制.<code>CFString</code>,对于它的实例,提供了<code>CFStringGetCStringPtr</code>函数来直接访问.<br>最后,你可以在一定的程度上自定义一些不透明类型.例如,集合类型允许为集合的每一个成员上为唤醒函数定义一个回调.集合类型允许调用函数时定义一个回调(译注:callback,可以理解为函数指针)，并让每个集合成员调用.</p>
+<h3 id="对象引用"><a href="#对象引用" class="headerlink" title="对象引用"></a>对象引用</h3><p>你可以通过引用来指向一个Core Foundation对象(不透明类型).对于头文件的中的每一个不透明类型,你将会注意到一行或两行相似的,类似下面的语句:  </p>
+<pre><code>typedef const struct __CFArray * CFArrayRef;
+typedef struct __CFArray * CFMutableArrayRef;
+</code></pre><p>声明这些指针指向(私有的)不可变和可变版本的结构.Core Foundation中许多函数的参数和返回值采用对象引用类型,而且从不使用<code>typedef</code>私有结构的类型. 例如:  </p>
+<pre><code>CFStringRef CFStringCreateByCombiningStrings(CFAllocatorRef alloc, CFArrayRef array, CFStringRef separatorString);
+</code></pre><p>查看 <a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFDesignConcepts/Articles/VarietyOfObjects.html#//apple_ref/doc/uid/20001109-CJBEJBHH" target="_blank" rel="external">对象的种类</a>获取更多信息,可变的的还有其他种类的不透明对象.<br>每一个Core Foundation不透明类型给他们的对象定义一个唯一类型ID,如在<code>CFArray</code>对象上的<code>CFArrayRef</code>.类型ID是类型为<code>CFTypeID</code>的整型,这个ID标识了一个Core Foundation所属的不透明类型.在各种上下文中使用类型ID, 如在你操作各式各样的容器时使用.Core Foundation提供一些编程性接口,用于获取和计算类型ID的值.  </p>
+<blockquote>
+<p>重要:由于类型ID的值可以随着版本的变化而变化,你的类型ID应该不能依赖已保存的或写死的类型ID,也不应该被任何能观察到的属性赋值(例如赋给它一个简单的整形:23333).  </p>
+</blockquote>
+<p>另外,Core Foundation定义了一个通用的对象引用(object-reference)类型, <code>CFTypeRef</code>,类似其他面向对象语言的基(root)类.这个通用的引用作为一个多态函数的参数与返回值的占位符类型,可以指向任何Core Foundation对象.查看<a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFDesignConcepts/Articles/PolymorphicFunctions.html#//apple_ref/doc/uid/20001108-CJBEJBHH" target="_blank" rel="external">多态函数</a>获取更多关于这个课题的信息.查看<a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/CFMemoryMgmt.html#//apple_ref/doc/uid/10000127i" target="_blank" rel="external">Core Foundation的内存管理指南</a>讨论使用对象引用时内存管理的相关问题.</p>
+<h3 id="多态函数"><a href="#多态函数" class="headerlink" title="多态函数"></a>多态函数</h3><p>Core Foundation提供一些多态函数,这些函数可以将任意Core Foundation对象作为参数和(有一个例子:<code>CFRetain</code>)可以返回任意Core Foundation对象.这些参数和返回值的类型是<code>CFTypeRef</code>,是一个通用的对象引用(object-reference)类型.<code>CFType</code>是类似于其他面向对象语言中的根类,因为它的函数可以被其他所有对象复用.<br>你可以使用多态函数对所有的Core Foundation对象进行一些通用操作:  </p>
+<ul>
+<li>引用计数<br><code>CFType</code>提供几个多态函数来计算和获取对象的引用计数.查看<a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/CFMemoryMgmt.html#//apple_ref/doc/uid/10000127i" target="_blank" rel="external">Core Foundation的内存管理指南</a>获取更多的关于这些函数的信息.  </li>
+<li>比较对象<br><code>CFEqual</code>函数能比较任何两个Core Foundation对象(查看<a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFDesignConcepts/Articles/Comparing.html#//apple_ref/doc/uid/20001112-CJBEHAAG" target="_blank" rel="external">比较对象</a>).等式成立的基本条件取决于同类型对象的比较.例如,如果比较两个<code>CFString</code>对象,该测试涉及逐个字符的比较.  </li>
+<li>哈希对象<br><code>CFHash</code>函数返回一个唯一的能够标识Core Foundation对象的哈希码(查看<a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFDesignConcepts/Articles/Comparing.html#//apple_ref/doc/uid/20001112-CJBEHAAG" target="_blank" rel="external">比较对象</a>).你可以把哈希码当哈希表数据结构中的表地址.如果两个对象相等(由<code>CFEqual</code>函数决定),他们必须有相同的哈希值.  </li>
+<li>核查对象<br><code>CFType</code>提供核查对象的函数,从而了解它们的内容以及他们”所属”的类型.<code>CFCopyDescription</code>函数返回一个描述该对象的字符串(更切确地说,是一个<code>CFString</code>对象的引用).<code>CFCopyTypeIDDescription</code>函数需要提供一个<code>CFTypeID</code>参数而不是<code>CFTypeRef</code>.这个函数返回一个描述标识一个不透明类型的类型ID的字符串引用.这些函数主要用来协助调试.查看<a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFDesignConcepts/Articles/Inspecting.html#//apple_ref/doc/uid/20001113-CJBEHAAG" target="_blank" rel="external">核查对象</a>获取更多相关的函数.<br>你还可以通过<code>CFGetTypeID</code>函数获得不透明对象的类型ID,通过这个ID决定一个通用类型对象所属的不透明类型,再将已知类型ID对应的值相比较.查看<a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFDesignConcepts/Articles/Inspecting.html#//apple_ref/doc/uid/20001113-CJBEHAAG" target="_blank" rel="external">检查对象</a>获取更多关于这个任务的信息.</li>
+</ul>
+<h3 id="对象的种类"><a href="#对象的种类" class="headerlink" title="对象的种类"></a>对象的种类</h3><p>不透明类型拥有多达3种基本种类,或者”口味”.(译注:这里为了跟之前的对象类型(object type)区分,故意使用种类或’口味’).基于可扩展性和可编辑性的特点分为以下:  </p>
+<ul>
+<li>不可变和固定大小  </li>
+<li>可变和固定大小  </li>
+<li>可变和不固定大小  </li>
+</ul>
+<p>可变对象是可编辑的,意味着他们的内容可以修改.不可变对象不能编辑的;一旦创建之后就无法再改变.对不可变对象的任何修改都会导致一些(译注:编译器)错误.一个固定大小的可变对象有一个最大值来限制其大小的增长;就<code>CFString</code>来说,一个<code>CFString</code>可能是字符串中的字符个数,对于一个容器来说,其限制可能是元素的数量.<br>一些不透明类型,例如<code>CFString</code>和<code>C FArray</code>,可以创建所有三种<code>口味</code>的对象.大部分不透明类型可以创建不可变的,固定大小的对象,至少有一个无限制的创建函数来创建无限制对象(如<code>CFArrayCreate</code>).决定可变对象的可变大小或不可变大小的是<code>CreateMutable</code>函数的容量(<code>capacity</code>)参数和长度最大值(<code>maximum-length</code>)参数;任何正整数都能生成对固定大小的对象,但是参数为0则生成一个可变大小对象.<br>使用带有”Mutable”名字的类型指向可变对象,例如,<code>CFMutableStringRef</code>.</p>
+<h3 id="命名约定"><a href="#命名约定" class="headerlink" title="命名约定"></a>命名约定</h3><p>Core Foundation中主要编程接口的约定是使用不透明类型的名字中最密切相关的符号作为符号的前缀.对于函数,这个前缀不仅标识这该函数”属于”那个类型,而且经常用来标识函数动作(action)的目标(target)对象的类型(type).(有一个例外是那些以<code>k</code>作为前缀的常量).在头文件中有一些例子:  </p>
+<pre><code>/* from CFDictionary.h */
+CF_EXPORT CFIndex CFDictionaryGetCountOfKey(CFDictionaryRef dict, const void *key);
+/* from CFString.h */
+typedef UInt32 CFStringEncoding;
+/* from CFCharacterSet.h */
+typedef enum {
+  kCFCharacterSetControl = 1,
+  kCFCharacterSetWhitespace,
+  kCFCharacterSetWhitespaceAndNewline,
+  kCFCharacterSetDecimalDigit,
+  kCFCharacterSetLetter,
+  kCFCharacterSetLowercaseLetter,
+  kCFCharacterSetUppercaseLetter,
+  kCFCharacterSetNonBase,
+  kCFCharacterSetDecomposable,
+  kCFCharacterSetAlphaNumeric,
+  kCFCharacterSetPunctuation,
+  kCFCharacterSetIllegal
+  } CFCharacterSetPredefinedSet;
+</code></pre><p>除上述之外,Core Foundation中有一小部分编程接口约定是有关于不透明类型和内存管理的.  </p>
+<ul>
+<li>Get,Copy和Create之间有着很重大的区别,在于函数的返回值的命名.如果你使用Get函数,只是无法确定对象的生命周期.为了确保对象能够持续存在,你可以持有(retain)它(使用<code>CFRetain</code>函数),或者在一些情况下,复制(copy)一份.如果你使用Copy或Create函数,你必须负责释放对象(使用<code>CFRelease</code>函数).更多详情请查看<a href="https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/CFMemoryMgmt.html#//apple_ref/doc/uid/10000127i" target="_blank" rel="external">Core Foundation内存管理指南</a>  </li>
+<li><p>部分Core Foundation对象有它们自己的命名约定,并以此加强通用操作的一致性.例如,集合(collection)将下列动词嵌入函数名,已表示集合中的元素的特定操作.</p>
+<ul>
+<li><code>Add</code>意味’如果存在就添加,如果存在就不做任何事’(针对某一个集合实例)</li>
+<li><code>Replace</code>意味’如果存在就替换,如果不存在就不做任何事’</li>
+<li><code>Set</code>意味’如果不存在就添加,如果存在就替换’</li>
+<li><code>Remove</code>意味’如果存在就删除,如果不存在就不做任何事’</li>
+</ul>
+</li>
+<li><p><code>CFIndex</code>类型用于下标(index),计数(count),长度(length),和大小(size),并作为函数的参数或者返回值.这个类型(整形)的值(当前是32位),可以随着处理器地址大小的增长而增长.在指针大小不同的架构上,如果是64位处理器,CFIndex可能是64位,这取决于<code>int</code>的大小.在Core Foundation参数中使用相同类型<code>CFIndex</code>的变量进行交互,可以确保您的代码有更高的源码兼容性.  </p>
+</li>
+<li>一些Core Foundation头文件似乎定义不透明类型,但实际上却包含便利函数而不是关联一些特定的类型.恰当的例子是<code>CFPropertyList.h</code>.<code>CFPropertyList</code>是下列属性列表类型中任意一个类型的占位符类型:<code>CFString</code>,<code>CFDate</code>,<code>CFBoolean</code>,<code>CFNumber</code>,<code>CFDate</code>,<code>CFArray</code>和<code>CFDictionary</code>.</li>
+<li>除非特殊说明,否则所有传递引用参数并打算返回值都可以接受<code>NULL</code>.这表明调用者不需要关心函数的返回值.</li>
+</ul>
+<h3 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h3><p>Core Foundation定义若干个数据类型,并在函数中使用.这些类型存在的目的是抽象原始值.这个原始值可能随处理器地址空间改变而改变.例如<code>CFIndex</code>类型,应用于下标(index), 计数(count),长度(length),和大小(size)参数.<code>CFOptionFlags</code>类则用于位字段参数,<code>CFHashCode</code>类型包含从<code>CFHash</code>函数和已确定的哈希回调中返回的哈希结果.<br>其他基本类型用于传入函数和函数返回的比较值与范围值.<code>CFRange</code>是一个指定线性队列的任意一部分的结构,从字符串中的数组到集合中的元素.对于比较函数,<code>CFComparisonResult</code>类型定义枚举常量来代表适当的返回值(等于,小于,大于).部分Core Foundation函数传入一个回调到比较函数中去;如果你需要自定义比较操作,函数必须符合<code>CFComparatorFunction</code>中指定的类型(译注:函数的参数必须与(const void <em>val1, const void </em>val2, void *context)相同).  </p>
+<blockquote>
+<p>重要: 只要其值是整形值，那么其类型一定是Core Foundation类型,特别是<code>CFIndex</code>和<code>CFTypeID</code>,可以随着处理器寻址大小的增长而增长.在Core Foundation参数中使用相同类型<code>CFIndex</code>的变量进行交互,可以让确保您的代码有更高的源码兼容性.</p>
+</blockquote>
+<p>Core Foundation中体统的其他不透明类型在其他主题中讨论.</p>
+<h3 id="比较对象"><a href="#比较对象" class="headerlink" title="比较对象"></a>比较对象</h3><p>你可用<code>CFEqual</code>函数来比较两个Core Foundation对象.如果两个对象在本质上是相等的,函数将返回一个<code>boolean</code>类型的<code>true</code>值.”本质上”相等取决于相同类型的对象的比较.当你比较两个<code>CFString</code>对象,不管他们的编码和是否可变,当他们逐个字符完全匹配时, Core Foundation则认为他们本质上相等.两个<code>CFArray</code>对象比较,当它们有相同数量的元素和数组中每一个元素对象与对应数组中的元素本质上相等,这时会认为他们本质上相等.很明显,比较对象必须是相同类型(不管可变或不可变)才会认为是相等的.<br>下面代码片段给你展示了可能使用<code>CFEqual</code>函数比较一个常量与传入参数是否相等.<br><strong>Listing</strong> 1 比较Core Foundation对象</p>
+<pre><code>void stringTest(CFStringRef myString) {
+  Boolean equal = CFEqual(myString, CFSTR(“Kalamazoo”));
+  if (!equal) {
+    printf(“They’re not equal!&quot;);
+  }
+  else {
+    printf(“They’re equal!”):
+  }
+}
+</code></pre><h3 id="核查对象"><a href="#核查对象" class="headerlink" title="核查对象"></a>核查对象</h3><p>Core Foundation对象的主要特征是它们都基于一个不透明(或私有)类型;可能因此难以直接核查对象的内部数据.然而,基础服务提供了两个函数来检查Core Foundation对象.这些函数返回对象及对象类型的描述信息.<br>为了找出Core Foundation对象的内容,调用<code>CFCopyDescription</code>函数并传进其对象.然后打印所引用的字符串对象所”包含”的字符序列.</p>
+<p><strong>Listing</strong> 1 使用<code>CFCopyDescription</code></p>
+<pre><code>void describe255(CFTypeRef tested) {
+  char buffer[256];
+  CFIndex got;
+  CFStringRef description = CFCopyDescription(tested);
+  CFStringGetBytes(description,
+    CFRangeMake(0, CFStringGetLength(description)),
+    CFStringGetSystemEncoding(), &apos;?&apos;, TRUE, buffer, 255, &amp;got);
+    buffer[got] = (char)0;
+    fprintf(stdout, &quot;%s&quot;, buffer);
+    CFRelease(description);
+  }
+</code></pre><p>这个例子显示了一种打印描述信息(description)的途径.你不应该使用<code>CFStringGetBytes</code>,而是使用<code>CFString</code>函数来获取真正的字符串.<br>为了确定一个”未知”对象的类型,用<code>CFGetTypeID</code>函数取得它的类型ID,将值与已知的类型ID进行比较,直到匹配.可以使用<code>CFGetTypeID</code>获取一个对象的类型ID.每一个不透明类型还定义了一个<code>CFTypeGetTypeID</code>表格的函数(例如<code>CFArrayGetTypeID</code>);这个函数返回给定类型的类型ID.在此之前,你可以测试一下一个<code>CFType</code>对象是否是指定不透明类型的成员.  </p>
+<pre><code>CFTypeID type = CFGetTypeID(anObject);
+if (CFArrayGetTypeID() == type)
+  printf(“anObject is an array.”);
+else
+  printf(“anObject is NOT an array.”);
+</code></pre><p>为了打印Core Foundation对象的类型在调试状态下的相关信息.使用<code>CFGetTypeID</code>函数来获取这个类型ID,然后通过这个值传入<code>CFCopyTypeIDDescription</code>函数:  </p>
+<pre><code>/* aCFObject is any Core Foundation object */
+CFStringRef descrip = CFCopyTypeIDDescription(CFGetTypeID(aCFObject));
+</code></pre><blockquote>
+<p>注意: 字符串基础功能中包含两个函数:<code>CFShow</code>和<code>CFShowStr</code>,都声明在<code>CFString.h</code>头文件中.在调试模式下,你可以调用它们打印Core Foundation的描述.  </p>
+<p>重要: <code>CFCopyDescription</code>和<code>CFCopyTypeIDDescription</code>只在调试模式下使用.不要创建任何依赖它们的代码,因为描述信息与他们的格式随时改变.</p>
+</blockquote>
+<h3 id="无代价桥接类型"><a href="#无代价桥接类型" class="headerlink" title="无代价桥接类型"></a>无代价桥接类型</h3><p>在Core Foundation框架与Foundation框架中有若干可相互转换的数据类型.可相互装换的数据类型也被称为无代价桥接(toll-free bridged)数据类型.这意味着你可以使用相同的数据结构作为参数传进Core Foundation调用的函数和作为一个Objective-C消息发送的接收器.例如,<code>NSLocale</code>(查看<a href="https://developer.apple.com/reference/foundation/nslocale" target="_blank" rel="external">NSLocale Class Reference</a>), 与之对应的Core Foundation的<code>CFLocal</code>(查看<a href="https://developer.apple.com/reference/corefoundation/1666963-cflocale" target="_blank" rel="external">CFLocale</a>)是可相互转换的.<br>不是所有的数据类型都是无代价桥接的,甚至通过他们的名字可能猜得出他们是有代价桥接的.例如<code>NSRunLoop</code>转换到<code>CFRunLoop</code>不是无代价桥接,<code>NSBundle</code>转换至<code>CFBundle</code>不是无代价桥接.<code>NSDateFormate</code>转换到<code>CFDateFormatter</code>也不是.table 1提供了一张提供的无条件桥接的表.</p>
+<blockquote>
+<p>注意: 在你使用corefoundation的集合时,如果安装(install)一个自定义回调(call back),包括<code>NULL</code>回调.从Objective-C访问时,该自定义回调的内存管理的行为是没有定义的.</p>
+</blockquote>
+<h4 id="强制类型转换和对象生命期的语义-Casting-and-Object-Lifetime-Semantics"><a href="#强制类型转换和对象生命期的语义-Casting-and-Object-Lifetime-Semantics" class="headerlink" title="强制类型转换和对象生命期的语义(Casting and Object Lifetime Semantics)"></a>强制类型转换和对象生命期的语义(Casting and Object Lifetime Semantics)</h4><p>通过无条件桥接,当你在一个方法中,看到有些参数,例如<code>NSLocale *</code>参数,可以传进一个<code>CFLocaleRef</code>;在函数看到<code>CFLocaleRef</code>参数,你可以传一个<code>NSLocale</code>实例.不过你必须为编译器提供其他信息: 首先, 将一个类型强制转换(cast)为其他类型;另外,你可能还要指示出对象的声明期语义.<br>编译器理解Objective-C方法返回的Core Foundation类型和遵循过去Cocoa命名约定(查看<a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html#//apple_ref/doc/uid/10000011i" target="_blank" rel="external">高级内存管理编程指南</a>).例如,编译器知道在iOS中,通过<code>UIColor</code>本身并没有<code>CGColor</code>方法来返回一个<code>CGColor</code>. 你必须使用适当的强制类型转换(cast),就像下面所展示的:  </p>
+<pre><code>NSMutableArray *colors = [NSMutableArray arrayWithObject:(id)[[UIColor darkGrayColor] CGColor]];
+[colors addObject:(id)[[UIColor lightGrayColor] CGColor]];
+</code></pre><p>编译器不会自动管理Core Foundation对象的生命期.选择强制类型转换(cast)(在<code>objc/runtime.h</code>中定义)和Core Foundation风格的宏(在<code>NSObject.h</code>中定义)其中一个,告诉编译器关于对象的持有者.  </p>
+<ul>
+<li><code>__bridge</code>将一个指向Objective-C与Core Foundation两者之一的指针相互转换,没有转换持有权.</li>
+<li><code>__bridge_retained</code>或<code>CFBridgingRetain</code>强制类型转换(cast)指向Objective-C的指针为Core Foundation指针并把持有权转给你.<br>你负责调用<code>CFRelease</code>或相关函数来放弃对象的持有权.  </li>
+<li><p><code>__bridge_transfer</code>或<code>CFBridgingRelease</code>移动一个非Objective-C指针到Objective-C,并且将对象持有权交给ARC.<br>ARC 有负责放弃对象的持有权.<br>上述看起来就像下面这个例子:  </p>
+<pre><code>NSLocale *gbNSLocale = [[NSLocale alloc] initWithLocaleIdentifier:@&quot;en_GB&quot;];
+CFLocaleRef gbCFLocale = (__bridge CFLocaleRef)gbNSLocale;
+CFStringRef cfIdentifier = CFLocaleGetIdentifier(gbCFLocale);
+NSLog(@&quot;cfIdentifier: %@&quot;, (__bridge NSString *)cfIdentifier);
+// Logs: &quot;cfIdentifier: en_GB&quot;
+
+CFLocaleRef myCFLocale = CFLocaleCopyCurrent();
+NSLocale *myNSLocale = (NSLocale *)CFBridgingRelease(myCFLocale);
+NSString *nsIdentifier = [myNSLocale localeIdentifier];
+CFShow((CFStringRef)[@&quot;nsIdentifier: &quot; stringByAppendingString:nsIdentifier]);
+</code></pre></li>
+</ul>
+<p>下一个例子展示Core Foundation内存管理函数的用法.这些函数由Core Foundation内存管理规则主宰:  </p>
+<pre><code>- (void)drawRect:(CGRect)rect {
+
+  CGContextRef ctx = UIGraphicsGetCurrentContext();
+  CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
+  CGFloat locations[2] = {0.0, 1.0};
+  NSMutableArray *colors = [NSMutableArray arrayWithObject:(id)[[UIColor darkGrayColor] CGColor]];
+  [colors addObject:(id)[[UIColor lightGrayColor] CGColor]];
+  CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)colors, locations);
+  CGColorSpaceRelease(colorSpace);  // Release owned Core Foundation object.
+
+  CGPoint startPoint = CGPointMake(0.0, 0.0);
+  CGPoint endPoint = CGPointMake(CGRectGetMaxX(self.bounds), CGRectGetMaxY(self.bounds));
+  CGContextDrawLinearGradient(ctx, gradient, startPoint, endPoint,
+                              kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
+                              CGGradientRelease(gradient);  // Release owned Core Foundation object.
+}
+</code></pre><h4 id="无代价桥接类型-1"><a href="#无代价桥接类型-1" class="headerlink" title="无代价桥接类型"></a>无代价桥接类型</h4><p><strong>table</strong> 1 提供一个可在Core Foundation和Foundation之间相互装换的数据类型的列表.对于每一对,表中来列举了它们之间无代价桥接变得有效时OS X的版本.<br><strong>Table</strong> 1 在Core Foundation和Foundation之间相互装换的数据类型  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Core Foundation type</th>
+<th style="text-align:left">Foundation Class</th>
+<th style="text-align:left">Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CFArrayRef</td>
+<td style="text-align:left">NSArray</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFAttributedStringRef</td>
+<td style="text-align:left">NSAttributedString</td>
+<td style="text-align:left">OS X v10.4</td>
+</tr>
+<tr>
+<td style="text-align:left">CFCalendarRef</td>
+<td style="text-align:left">NSCalendar</td>
+<td style="text-align:left">OS X v10.4</td>
+</tr>
+<tr>
+<td style="text-align:left">CFCharacterSetRef</td>
+<td style="text-align:left">NSCharacterSet</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFDataRef</td>
+<td style="text-align:left">NSData</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFDateRef</td>
+<td style="text-align:left">NSDate</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFDictionaryRef</td>
+<td style="text-align:left">NSDictionary</td>
+<td style="text-align:left">OS X v10.5</td>
+</tr>
+<tr>
+<td style="text-align:left">CFErrorRef</td>
+<td style="text-align:left">NSError</td>
+<td style="text-align:left">OS X v10.5</td>
+</tr>
+<tr>
+<td style="text-align:left">NSLocale</td>
+<td style="text-align:left">NSLocale</td>
+<td style="text-align:left">OS X v10.4</td>
+</tr>
+<tr>
+<td style="text-align:left">CFMutableArrayRef</td>
+<td style="text-align:left">NSMutableArray</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFMutableAttributedStringRef</td>
+<td style="text-align:left">NSMutableAttributedString</td>
+<td style="text-align:left">OS X v10.4</td>
+</tr>
+<tr>
+<td style="text-align:left">CFMutableCharacterSetRef</td>
+<td style="text-align:left">NSMutableCharacterSet</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFMutableDataRef</td>
+<td style="text-align:left">NSMutableData</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFMutableDictionaryRef</td>
+<td style="text-align:left">NSMutableDictionary</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFMutableSetRef</td>
+<td style="text-align:left">NSMutableSet</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFMutableStringRef</td>
+<td style="text-align:left">NSMutableString</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFNumberRef</td>
+<td style="text-align:left">NSNumber</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFReadStreamRef</td>
+<td style="text-align:left">NSInputStream</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFRunLoopTimerRef</td>
+<td style="text-align:left">NSTimer</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFSetRef</td>
+<td style="text-align:left">NSSet</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFStringRef</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFTimeZoneRef</td>
+<td style="text-align:left">NSTimeZone</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFURLRef</td>
+<td style="text-align:left">NSURL</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+<tr>
+<td style="text-align:left">CFWriteStreamRef</td>
+<td style="text-align:left">NSOutputStream</td>
+<td style="text-align:left">OS X v10.0</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/[译]core Foundation design concepts/" class="archive-article-date">
+  	<time datetime="2016-10-19T19:18:26.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-20</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-设计模式:抽象工厂--Objective-C实现(Abstract Factory)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/设计模式:抽象工厂--Objective-C实现(Abstract Factory)/">设计模式:抽象工厂--Objective-C实现(Abstract Factory).md</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇继续介绍抽象工厂,如果想要了解简单工厂与工厂方法的实现,请看我上一篇文章<a href="[设计模式:工厂方法--Objective-C实现](http://www.jianshu.com/p/b811774ffef1)">[设计模式:工厂方法--Objective-C实现](http://www.jianshu.com/p/b811774ffef1)</a></p>
+<h3 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h3><p>假如现在要开发一款聊天的APP,并已经确定了需求为:该APP有VIP系统,这个VIP系统可能影响到界面UI,以及部分功能.但是目前只确认两个地方有影响:  </p>
+<ol>
+<li>头像,VIP的头像右下角有个V小图标显示.VIP的头像有紫色边框.</li>
+<li>UIButton.</li>
+</ol>
+<p>可以看到,在编写代码的时候并不知道用户的具体类型.而且,普通用户跟VIP用户有着相似的动作.<br>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/设计模式:抽象工厂--Objective-C实现(Abstract Factory)/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/设计模式:抽象工厂--Objective-C实现(Abstract Factory)/" class="archive-article-date">
+  	<time datetime="2016-10-19T18:50:11.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-20</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-设计模式:工厂模式--Objective-C实现(factory pattern)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/设计模式:工厂模式--Objective-C实现(factory pattern)/">设计模式:工厂模式--Objective-C实现(factory pattern).md</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>工厂模式应用非常广泛,经常可以在一些复杂的应用或框架上看见其影子.正所谓  </p>
+<blockquote>
+<p>没见过猪跑,但我吃过猪肉.</p>
+</blockquote>
+<p>你可以在NSString看到工厂方法.尝试执行以下代码:<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str = <span class="string">@"string 1"</span>;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"string 1 class : %@"</span>, [str <span class="keyword">class</span>]);</div><div class="line"><span class="built_in">NSString</span> *str2 = [<span class="built_in">NSString</span> stringWithUTF8String:<span class="string">"string 2"</span>];</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"string 2 class :%@"</span>, [str2 <span class="keyword">class</span>]);</div></pre></td></tr></table></figure></p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/设计模式:工厂模式--Objective-C实现(factory pattern)/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/设计模式:工厂模式--Objective-C实现(factory pattern)/" class="archive-article-date">
+  	<time datetime="2016-10-19T18:48:51.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

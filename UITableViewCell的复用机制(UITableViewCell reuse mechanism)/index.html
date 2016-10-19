@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>UITableViewCell的复用机制(UITableViewCell reuse mechanism).md | John</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言UITableview在iOS中的使用频率是非常高的.通常,我们只需要通过设置代理,并且在代理方法tableView:cellForRowAtIndexPath: 调用 dequeueReusableCellWithIdentifier:获取cell并直接使用.但是从没有细致得想过其中的过程与机制,并且知道最近面试(此次面试的问题)的时候,才发现自己表述得不太好.这种情况就好像你每天都准时吃放">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UITableViewCell的复用机制(UITableViewCell reuse mechanism).md">
+<meta property="og:url" content="http://johnmaster.com/UITableViewCell的复用机制(UITableViewCell reuse mechanism)/index.html">
+<meta property="og:site_name" content="John">
+<meta property="og:description" content="前言UITableview在iOS中的使用频率是非常高的.通常,我们只需要通过设置代理,并且在代理方法tableView:cellForRowAtIndexPath: 调用 dequeueReusableCellWithIdentifier:获取cell并直接使用.但是从没有细致得想过其中的过程与机制,并且知道最近面试(此次面试的问题)的时候,才发现自己表述得不太好.这种情况就好像你每天都准时吃放">
+<meta property="og:updated_time" content="2016-10-19T18:10:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UITableViewCell的复用机制(UITableViewCell reuse mechanism).md">
+<meta name="twitter:description" content="前言UITableview在iOS中的使用频率是非常高的.通常,我们只需要通过设置代理,并且在代理方法tableView:cellForRowAtIndexPath: 调用 dequeueReusableCellWithIdentifier:获取cell并直接使用.但是从没有细致得想过其中的过程与机制,并且知道最近面试(此次面试的问题)的时候,才发现自己表述得不太好.这种情况就好像你每天都准时吃放">
+  
+    <link rel="alternative" href="/atom.xml" title="John" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <script src="/style.js"></script>
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">a flying white kite</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="null" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">John Doe</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">a flying white kite</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-UITableViewCell的复用机制(UITableViewCell reuse mechanism)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      UITableViewCell的复用机制(UITableViewCell reuse mechanism).md
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>UITableview在iOS中的使用频率是非常高的.通常,我们只需要通过设置代理,并且在代理方法<br><code>tableView:cellForRowAtIndexPath:</code> 调用 <code>dequeueReusableCellWithIdentifier:</code>获取cell并直接使用.<br>但是从没有细致得想过其中的过程与机制,并且<br>知道最近面试(此次面试的问题)的时候,才发现自己表述得不太好.这种情况就好像你每天都准时吃放(滑稽),突然有一天有人问你人为什么吃放的时候自己却没能即使答上来的那种感觉.<br>说明自己掌握得不够扎实.as we know,  </p>
+<blockquote>
+<p>如果你不能将知识通过简洁的语言表达出来,那说明你还没掌握这个知识.</p>
+</blockquote>
+<p>借此机会,将这个知识点记录下来</p>
+<h3 id="reuseIdentifier"><a href="#reuseIdentifier" class="headerlink" title="reuseIdentifier"></a>reuseIdentifier</h3><p>对于reuseIdentifier,<a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/occ/instp/UITableViewCell/reuseIdentifier" target="_blank" rel="external">官方文档</a>是这样解释的:  </p>
+<blockquote>
+<p>The reuse identifier is associated with a <code>UITableViewCell</code> object that<br> the table-view’s delegate creates with the intent to reuse it<br>  as the basis (for performance reasons) for multiple rows of a table view.<br>   It is assigned to the cell object in <code>initWithFrame:reuseIdentifier:</code> and cannot be changed thereafter.<br>    A <code>UITableView</code> object maintains a queue (or list) of the currently reusable cells,<br>    each with its own reuse identifier,<br>    and makes them available to the delegate in the <code>dequeueReusableCellWithIdentifier:</code> method.</p>
+</blockquote>
+<p>冒死翻译一下:<br>这个复用标识关联<code>UITableviewCell</code>对象,在<code>tableview</code>代理中创建带有”标识符”来复用<code>cell</code>对象,而且作为<code>tableview</code>多行显示的原型(性能的原因).<br>通过<code>initWithFrame:reuseIdentifier:</code>来指定一个<code>cell</code>对象而且在调用这个方法之后就不能修改了.在<code>UITableView</code>对象维护一个当前复用的<code>cell</code>队列(或列表),<br>并且每一个<code>cell</code>都拥有自己的标识符,并这些<code>cell</code>能在代理对象的<code>dequeueReusableCellWithIdentifier:</code>的方法中获取.  </p>
+<p>在tableview新建的时候,会新建一个复用池(reuse pool).这个复用池可能是一个队列,或者是一个链表,保存着当前的<code>Cell</code>.pool中的对象的复用标识符就是reuseIdentifier,标识着不同的种类的<code>cell</code>.<br>所以调用<code>dequeueReusableCellWithIdentifier:</code>方法获取<code>cell</code>.从pool中取出来的<code>cell</code>都是<code>tableview</code>展示的原型.无论之前有什么状态,全部都要设置一遍.  </p>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p>在<code>UITableView</code>创建同事,会创建一个空的复用池.之后<code>UITableView</code>在内部维护这个复用池.<br>一般情况下,有两种用法,一种是在取出一个空的cell的时候再新建一个.<br>一种是预先注册cell.之后再直接从复用池取出来用,不需要初始化.  </p>
+<ul>
+<li><p><code>UITableview</code>第一次执行<code>tableView:cellForRowAtIndexPath:</code>.当前复用池为空.<br><code>dequeueReusableCellWithIdentifier</code>调用中取出<code>cell</code>,并检测<code>cell</code>是否存在.<br>目前并不存在任何<code>cell</code>,于是新建一个<code>cell</code>,执行初始化, 并<code>return cell</code>.<br>代码如下:</p>
+<pre><code>#define kInputCellReuseIdentifierPWD   @&quot;password_cell&quot;
+UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kInputCellReuseIdentifierPWD];
+if (!cell) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kInputCellReuseIdentifierPWD];
+    // other initialization i.e. add an UIButton to cell&apos;s contentView
+}
+// custom cell. i.e. change cell&apos;s title
+cell.textLabel.text = @&quot;It is awesome&quot;;
+return cell;
+</code></pre></li>
+</ul>
+<p>上面的代码中,你返回的cell会被<code>UITableView</code>添加到复用池中.第二次调用<code>tableView:cellForRowAtIndexPath:</code>,当前复用池中有一个<code>cell</code>.这时候因为<code>UITableView</code>上面还未填满,而且复用池中唯一的那一个已经在使用了.<br>所以取出来的Cell仍然是nil.于是继续新建一个cell并返回,复用池再添加一个<code>cell</code>,当前复用池中<code>cell</code>的个数为2.<br>假如当前<code>tableview</code>只能容纳5个cell.那么在滚动到第6个cell时,从<code>tableview</code>的复用池取出来的<code>cell</code>将会是第0行的那个<code>cell</code>.此时不再继续往复用池添加新的cell.  </p>
+<ul>
+<li><p>另一个用法:在<code>UITableView</code>初始化的时候,注册一个<code>UITableViewCell</code>的类.</p>
+<pre><code>[tableView registerClass:[UITableViewCell class]
+         forCellWithReuseIdentifier:@&quot;AssetCell&quot;];
+</code></pre></li>
+</ul>
+<p>使用此方法之后,就不用再判断取出来的<code>cell</code>是否为空,因为取出来的cell必定存在.调用<code>dequeueReusableCellWithIdentifier:</code>方法时,会先判断当前复用池时候有可用复用<code>cell</code>.<br>如果没有,<code>tableview</code>会再内部帮我们新建一个<code>cell</code>,其他的跟方法一样.<br>这里有个动画可以很清晰地看到滑动时的复用过程.  </p>
+<video id="video" controls preload="none" poster="https://cl.ly/1F0V040u2C3y/Screen%20Shot%202016-08-25%20at%203.18.23%20PM.png"><br>      <source id="mp4" src="https://cl.ly/3k0m1W2P0X3y/table-view-cell-reuse-simulation.mp4" type="video/mp4"><br>      <p>Your user agent does not support the HTML5 Video element.</p><br>    </video>
+
+<h3 id="爬过的坑"><a href="#爬过的坑" class="headerlink" title="爬过的坑"></a>爬过的坑</h3><p>从复用池中获取cell的方法有两个:<code>dequeueReusableCellWithIdentifier:forIndexPath:</code><br>和<code>dequeueReusableCellWithIdentifier:</code>.<br>还记得我们在第二个方法对使用使用复用池之前的情况吗? 对,就是注册一个cell.注册之后我们调用<code>dequeueReusableCellWithIdentifier:</code>获取cell.<br>对于第二种情况,两种方法都是没问题的.但是,在调用<code>registerClass:forCellReuseIdentifier:</code>之前,你必须注册一个cell类.正如<a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableView_Class/index.html#//apple_ref/occ/instm/UITableView/dequeueReusableCellWithIdentifier:forIndexPath:" target="_blank" rel="external">官方文档</a>所言:</p>
+<blockquote>
+<p>IMPORTANT<br>You must register a class or nib file using the <code>registerNib:forCellReuseIdentifier:</code> or <code>registerClass:forCellReuseIdentifier:</code> method before calling this method.</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><code>UITableViewCell</code>的复用机制是,在tableview中存在一个复用池.这个复用池是一个队列或一个链表.然后通过<code>dequeueReusableCellWithIdentifier:</code>获取一个<code>cell</code>,如果当前<code>cell</code>不存在,即新建一个cell,并将当前cell添加进复用池中.如果当前的cell数量已经到过tableview所能容纳的个数,则会在滚动到下一个<code>cell</code>时,自动取出之前的<code>cell</code>并设置内容.</p>
+<h3 id="扩展知识"><a href="#扩展知识" class="headerlink" title="扩展知识"></a>扩展知识</h3><p>对象池设计模式</p>
+<blockquote>
+<p>The object pool pattern is a software creational design pattern that uses a set of initialized objects kept ready to use – a “pool” – rather than allocating and destroying them on demand. A client of the pool will request an object from the pool and perform operations on the returned object. When the client has finished, it returns the object to the pool rather than destroying it; this can be done manually or automatically.  —- <a href="https://en.wikipedia.org/wiki/Creational_pattern" target="_blank" rel="external">wikipedia</a>  </p>
+</blockquote>
+<p>大意是,对象池模式是一种创造型设计模式,使用一个已初始化对象的集合,并能随时从”池”中拿出来使用.以此避免对象的创建销毁所带来的开销.一个客户端的池会请求池中的对象,然后执行并在返回的对象上执行操作.当这个客户端结束时,代替原本销毁操作,取而代之的是将对象返回到池中.这个操作可以手动执行,也可以自动的执行.<br>有一个明显的有点就是面对数据量很大时,能很好的改善性能.  </p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://en.wikipedia.org/wiki/Object_pool_pattern" target="_blank" rel="external">Object pool pattern</a><br><a href="http://oleb.net/blog/2014/05/scrollviews-inside-scrollviews/" target="_blank" rel="external">Scroll Views Inside Scroll Views</a><br><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewDataSource_Protocol/index.html#//apple_ref/occ/intf/UITableViewDataSource" target="_blank" rel="external">UITableViewDataSource Protocol Reference</a><br><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableView_Class/index.html" target="_blank" rel="external">UITableView</a>  </p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/UITableViewCell的复用机制(UITableViewCell reuse mechanism)/" class="archive-article-date">
+  	<time datetime="2016-10-19T18:10:10.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-20</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/iOS-字典转字符串的格式问题(iOS-wrong-format-of-json-string)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          iOS-字典转字符串的格式问题(iOS-wrong-format-of-json-string).md
+        
+      </div>
+    </a>
+  
+  
+    <a href="/JazzHands框架使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JazzHands框架使用.md</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 John Doe
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
